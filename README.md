@@ -1,2 +1,5 @@
-# FIAP-2019-2TDSF-DBE
-(FIAP) Repositório para a disciplina de Digital Business Enablement para a turma 2TDSF
+# (FIAP) Repositório para a disciplina de Digital Business Enablement para a turma 2TDSF
+
+Cada projeto se refere aos exercícios executados em sala de aula. Fique a vontade para melhorar estes exemplos, desde que sejam aderentes ao escopo da disciplina, Pull Requests são bem-vindos. 😄
+
+Para saber mais sobre os cursos de tecnologia da FIAP, acesse o site do curso em https://www.fiap.com.br/graduacao/tecnologo/analise-e-desenvolvimento-de-sistemas/
