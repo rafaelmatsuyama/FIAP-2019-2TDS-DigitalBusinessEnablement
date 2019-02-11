@@ -1,4 +1,4 @@
-# (FIAP) Repositório para a disciplina de Digital Business Enablement para a turma 2TDSF
+# (FIAP) Repositório para a disciplina de Digital Business Enablement para a turma 2TDSF (2019)
 
 Cada projeto se refere aos exercícios executados em sala de aula. Fique a vontade para melhorar estes exemplos, desde que sejam aderentes ao escopo da disciplina, Pull Requests são bem-vindos. 😄
 
