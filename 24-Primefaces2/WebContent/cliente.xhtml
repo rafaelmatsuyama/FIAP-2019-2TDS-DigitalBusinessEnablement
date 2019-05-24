@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="_template.xhtml">
+	<ui:define name="titulo">Lista de Clientes</ui:define>
+	<ui:define name="corpo">
+		<p:dataTable value="#{clienteBean.lista}" var="cliente" paginator="true" rows="2"
+emptyMessage="Cliente não encontrado"
+rowsPerPageTemplate="1,2,3">
+			<p:column headerText="Nome">
+#{cliente.nome}
+</p:column>
+			<p:column headerText="CPF">
+#{cliente.cpf}
+</p:column>
+			<p:column headerText="Data Nascimento">
+				<h:outputText value="#{cliente.time}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:outputText>
+			</p:column>
+		</p:dataTable>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="_template.xhtml">
+	<ui:define name="titulo">Login</ui:define>
+	<ui:define name="corpo">
+		<h:form>
+			<h:panelGrid columns="3">
+				<h:outputLabel value="Nome" />
+				<h:inputText value="#{cadastroBean.nome}" id="nome"
+					validator="#{cadastroBean.validaDado}">
+					<f:validateLength minimum="2" maximum="20" />
+				</h:inputText>
+				<h:message for="nome" />
+
+				<p:outputLabel for="cpf" value="CPF" />
+				<p:inputMask mask="999.999.999-99" id="cpf"
+					value="#{cadastroBean.cpf}" />
+				<h:message for="cpf" />
+
+				<p:outputLabel value="Qualificação" for="qualificacao" />
+				<p:rating id="qualificacao" value="#{cadastroBean.estrelas}" />
+				<h:message for="qualificacao" />
+
+				<p:outputLabel for="nascimento" value="Data de Nascimento" />
+				<p:calendar id="nascimento" value="#{cadastroBean.time}" />
+				<h:message for="nascimento" />
+
+				<h:outputLabel value="Idade" />
+				<h:inputText value="#{cadastroBean.idade}" id="idade"
+					validatorMessage="Idade deve ter entre 0 e 120 anos!">
+					<f:validateLongRange minimum="0" maximum="120" />
+				</h:inputText>
+				<p:message for="idade" />
+
+				<h:commandButton class="btn btn-primary"
+					action="#{cadastroBean.cadastrar}" value="Cadastrar" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
